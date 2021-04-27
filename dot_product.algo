@@ -23,18 +23,19 @@ BEGIN
     END_FOR
 END
 
-// Procedure dotProduct
-PROCEDURE dotProduct(VAR V1,V2: Array OF INTEGER)  // V1=[a1,b1,c1] V2=[a2,b2,c2]
+//Procedure dotProduct
+PROCEDURE dotProduct(V1,V2: Array OF INTEGER, VAR ps:INTEGER)  // V1=[a1,b1,c1] V2=[a2,b2,c2]
 VAR
-    i,ps:INTEGER:=0;
+    i:INTEGER:=0;
 BEGIN
+
     FOR i FROM 0 TO n-1 STEP 1  DO
         ps := ps+ V1[i] * V2[i];   // dot product = a1 * b1 + a2 * b2 + a3 * b3
     END_FOR
-    Write(ps);
+
 END
 
-//Funtion dotProduct
+//Function dotProduct
 FUNCTION dotProduct(V1,V2: Array OF INTEGER) : INTEGER // V1=[a1,b1,c1] V2=[a2,b2,c2]
 VAR
 VAR
